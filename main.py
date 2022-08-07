@@ -5,8 +5,8 @@ from flask import Flask, render_template
 
 app = Flask(
 	__name__,
-	template_folder='templates',  # Name of html file folder
-	static_folder='static'  # Name of directory for static files
+	template_folder='templates',
+	static_folder='static'
 )
 
 
@@ -48,7 +48,7 @@ def home():
 
 	# print(post_url)
 
-	return render_template('index.html', post_url=post_url)
+	return render_template('index.html', post_url=post_url, post_title)
   	
 	
 if __name__ == "__main__":  # Makes sure this is the main process
